@@ -1,0 +1,90 @@
+%% The first command in your LaTeX source must be the \documentclass command.
+%%
+%% Options:
+%% twocolumn : Two column layout.
+%% hf: enable header and footer.
+\documentclass[
+% twocolumn,
+% hf,
+]{ceurart}
+
+%%
+%% One can fix some overfulls
+\sloppy
+
+%\usepackage{second-year-phd-report}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage{myacronyms}
+\usepackage[most]{tcolorbox}
+%% LAST requirements!!
+\usepackage{cleveref}
+%% auto break lines
+\lstset{breaklines=true}
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% Rights management information.
+%% CC-BY is default license.
+\copyrightyear{2024}
+%\copyrightclause{Copyright for this paper by its authors.
+%  Use permitted under Creative Commons License Attribution 4.0
+%  International (CC BY 4.0).}
+
+%%
+%% This command is for the conference information
+\conference{Second Year PhD Report}
+
+%%
+%% The "title" command
+\title{Second Year PhD Report}
+
+%%
+
+\author[1]{Matteo Magnini}[%
+orcid=0000-0001-9990-420X,
+email=matteo.magnini@unibo.it,
+]
+
+\address[1]{Department of Computer Science and Engineering, University of Bologna, Via dell'Università 50, Cesena, Italy}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+%\begin{abstract}
+%Lorem
+%\end{abstract}
+
+%\begin{keywords}
+%\end{keywords}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:introduction}
+
+
+\section{Period Abroad}
+\label{sec:period-abroad}
+
+
+\section{Publications}
+\label{sec:publications}
+
+~\cite{DBLP:journals/csur/CiattoSAMO24}
+
+
+\section{Talks}
+\label{sec:talks}
+
+
+\section{Teaching}\label{sec:results}
+
+
+\bibliography{references}
+
+\end{document}

@@ -1,4 +1,11 @@
+out/
+second-year-phd-report.pdf
+.idea
+
 ## Core latex/pdflatex auxiliary files:
+*.xmpi
+*.abs
+*.xmpdata
 *.aux
 *.lof
 *.log
