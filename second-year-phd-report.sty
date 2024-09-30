@@ -2,5 +2,15 @@
 \usepackage{tabularx}
 \usepackage{subcaption}
 \usepackage{myacronyms}
-%% LAST requirements!!
+\usepackage{textcomp}
+\usepackage{mathrsfs}  % mathscr font
+\usepackage{boxedminipage}
+\usepackage{rotating}
+\usepackage{csquotes}
+%\usepackage{natbib}
+\usepackage[colorlinks, filecolor=dark_blue, urlcolor=dark_blue, linkcolor=black, citecolor=black]{hyperref}
 \usepackage{cleveref}
+
+\defbibcheck{mine}{\iffieldequalstr{annotation}{mine}{}{\skipentry}}
+\defbibcheck{other}{\iffieldequalstr{annotation}{other}{}{\skipentry}}
+

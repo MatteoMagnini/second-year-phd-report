@@ -1,97 +1,81 @@
-%% The first command in your LaTeX source must be the \documentclass command.
-%%
-%% Options:
-%% twocolumn : Two column layout.
-%% hf: enable header and footer.
-\documentclass[
-% twocolumn,
-% hf,
-]{ceurart}
+\documentclass[11pt]{article}
+\usepackage{mgates-letter}
+\definecolor{dark_blue} {rgb}{0., 0., 0.65}
+\usepackage{makecell}
+\usepackage[
+backend=biber,
+style=numeric,
+citestyle=numeric,
+maxcitenames=10,
+maxnames=10,
+%entrykey=false,
+%annotation=false,
+url=false
+]{biblatex}
 
-%%
-%% One can fix some overfulls
-\sloppy
+\usepackage{second-year-phd-report}
+\addbibresource{references.bib}
 
-%\usepackage{second-year-phd-report}
-\usepackage{listings}
-\usepackage{tabularx}
-\usepackage{subcaption}
-\usepackage{myacronyms}
-\usepackage[most]{tcolorbox}
-%% LAST requirements!!
-\usepackage{cleveref}
-%% auto break lines
-\lstset{breaklines=true}
-
-%%
-%% end of the preamble, start of the body of the document source.
 \begin{document}
+\sloppy
+\begin{center}
+	{{
+		\Large{
+			\textsc{PhD Programme in Computer Science and Engineering \\ 
+			\vspace{4mm}
+			Cycle XXXVIII}
+			}
+	}} 
+	\rule[0.1cm]{\textwidth}{0.1mm}
+	\rule[0.4cm]{\textwidth}{0.6mm}
+\end{center}
 
-%%
-%% Rights management information.
-%% CC-BY is default license.
-\copyrightyear{2024}
-%\copyrightclause{Copyright for this paper by its authors.
-%  Use permitted under Creative Commons License Attribution 4.0
-%  International (CC BY 4.0).}
+\begin{center}
+	{\LARGE{Symbolic Knowledge Injection \& Extraction for Autonomous Learning}} \\
+	\vspace{4mm}
+	{\large{PhD Year II -- Report}} 
+	\vspace{4mm}
+\end{center}
+\vspace{8mm}
+\par
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
 
-%%
-%% This command is for the conference information
-\conference{PhD course in Computer Science and Engineering, XXXIII cycle, University of Bologna, Italy}
+{\large{Commission: \\\bf
+Prof. Andrea Omicini \\
+Prof. Enrico Denti \\
+Prof. Giovanni Pau}
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.47\textwidth}
+	\raggedleft
+	{
+		\large{PhD Student: \\\bf Matteo Magnini}
+	}
+\end{minipage}
+\vspace{10mm}
 
-%%
-%% The "title" command
-\title{Second Year PhD Report}
+{
+	\raggedright
+	\rule[0.1cm]{\textwidth}{0.6mm}
+	\rule[0.5cm]{\textwidth}{0.1mm}
+}
 
-%%
-
-\author[1]{Matteo Magnini}[%
-orcid=0000-0001-9990-420X,
-email=matteo.magnini@unibo.it,
-]
-
-\address[1]{Department of Computer Science and Engineering, University of Bologna, Via dell'Università 50, Cesena, Italy}
-
-%%
-%% The abstract is a short summary of the work to be presented in the
-%% article.
-%\begin{abstract}
-%Lorem
-%\end{abstract}
-
-%\begin{keywords}
-%\end{keywords}
-
-\maketitle
-
+\newcommand{\rev}[1]{{
+	%\color{red}
+	#1
+	}}
 \section{Introduction}
-\label{sec:introduction}
-
 During the second year of my PhD, I have been working on several tasks, including research publications, teaching, visiting, participation in conferences, supervision of graduating students, and PhD courses.
 %
 In this report, I will provide a brief -- yet exhausting -- overview of the activities I have carried out during the second year.
 
-\section{Publications}
-\label{sec:publications}
 
-The second year of my PhD has been quite fruitful in terms of publications.
-%
-So far, only during this year, I have published the following papers:
-%
-\begin{description}
-    \item ~\cite{DBLP:conf/woa/RafanelliMACO24}
-    %
-    \item ~\cite{DBLP:conf/percom/MontagnaAFPKUM24}
-    %
-    \item ~\cite{DBLP:conf/dlog/MagniniOS24}
-    %
-    \item ~\cite{DBLP:journals/csur/CiattoSAMO24}
-\end{description}
-%
+\section{Research}
 
-\section{Period Abroad}
-\label{sec:period-abroad}
-
+%
+\subsection{Period Abroad}
 I have moved to Norway for a period of 3 months, from the 5th of March to the 8th of June 2024.
 %
 I was hosted by Prof.~Ana Ozaki at the University of Oslo, where I had the opportunity to work with her along with her research group.
@@ -102,57 +86,65 @@ In particular, the work started from the ExactLearner tool\footnote{\url{https:/
 %
 One paper has been already published~\cite{DBLP:conf/dlog/MagniniOS24}, and a more comprehensive work is currently undergoing.
 
-\section{Teaching}
-\label{sec:results}
-
-During the second year of my PhD, I have been involved in the following teaching activities:
-%
-\begin{description}
-    \item[Distributed System 2024/2025] Teaching assistant for the course of \href{https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/insegnamenti/insegnamento/2024/493397}{Distributed Systems}, held by Prof.~Andrea Omicini for a total of 24 hours.
-    %
-    \item[Distributed System 2023/2024] Teaching assistant for the course of \href{https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/insegnamenti/insegnamento/2023/493397}{Distributed Systems}, held by Prof.~Andrea Omicini for a total of 24 hours.
-    %
-\end{description}
 
 \section{Talks}
-\label{sec:talks}
 
-\section{Supervision}
-\label{sec:supervision}
 
-\section{PhD Courses}
-\label{sec:phd-courses}
+\section{International Conference Activities}
 
-This academic year, I was able to follow the following PhD courses:
-\begin{description}
-    \item[Multi-platform Programming for Research-Oriented Software] This course was held by Prof.~Giovanni Ciatto for a total of 10 hours (i.e., 2 CFUs \textbf{without} exam).
-    %
-    \item[An Introduction to Reinforcement Learning] This course was held by Prof.~Mirco Musolesi for a total of 16 hours (i.e., 3 CFUs \textbf{with} exam).
-    %
-    \item[Risk Assessment of Machine Learning for Cybersecurity] This course was held by Prof.~Fabio Pierazzi for a total of 20 hours (i.e., 4 CFUs \textbf{with} exam).
-\end{description}
 
-With this, I have completed reached the required number of CFUs for the PhD program, at least 18 CFUs with exams and maximum 6 CFUs without exams.
-%
-I have actually reached 20 CFUs with exams and 4 CFUs without exams.
-%
-List of the courses I have attended during the first year of my PhD:
-%
-\begin{description}
-    \item[Comparative Introduction to Deep Learning Frameworks: TensorFlow,PyTorch and Jax] This course was held by Prof.~Mirco Musolesi for a total of 6 hours (i.e., 1 CFUs \textbf{with} exam).
-    %
-    \item[Low-rank Approaches for Data Analysis: Models, Numerical Methods and Applications] This course was held by Prof.~Flavia Esposito for a total of 10 hours (i.e., 2 CFUs \textbf{with} exam).
-    %
-    \item[How to Write and Publish a Research Paper in Computer Science and Engineering] This course was held by Prof.~Paolo Torroni for a total of 10 hours (i.e., 2 CFUs \textbf{with} exam).
-    %
-    \item[Data Platforms and Artificial Intelligence: Challenges and Applications] This course was held by Prof.~Matteo Francia for a total of 10 hours (i.e., 2 CFUs \textbf{without} exam).
-    %
-    \item[10th International Gran Canaria School] Summer School on Artificial Intelligence, Gran Canaria, Spain, 2023 for a total of 40 hours (i.e., 4 CFUs \textbf{with} exam).
-    %
-    \item[DevOps meets scientific research] This course was held by Prof.~Danilo Pianini for a total of 20 hours (i.e., 4 CFUs \textbf{with} exam).
-    %
-\end{description}
+\section{Teaching}
+\begin{enumerate}
+	\item Teaching assistant @ Distributed System 2023/2024, Ingegneria e Scienze Informatiche LM, 24 ore
+	\item Teaching assistant @ Distributed System 2024/2025, Ingegneria e Scienze Informatiche LM, 24 ore
+\end{enumerate}
 
-\bibliography{references}
+
+\section{Courses and School}
+
+\begin{table}[H]
+	\resizebox{\textwidth}{!}{%
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+		Professor & Course & Kind & Credits & Period & Exam \\ \hline
+		Giovanni Ciatto & \makecell{Multi-platform Programming \\for Research-Oriented Software} & PhD Course & \makecell{10 hours \\ 2 proposed credits} & \makecell{Oct. - Nov. \\ 2023} & Not done \\ \hline
+		Mirko Musolesi & \makecell{An Introduction to Reinforcement Learning} & PhD Course & \makecell{16 hours \\ 3 proposed credits} & \makecell{Oct. - Nov. \\ 2023} & Done \\ \hline
+		Fabio Pierazzi & \makecell{Risk Assessment of Machine Learning\\ for Cybersecurity} & PhD Course & \makecell{20 hours \\ 4 proposed credits} & \makecell{Apr. \\ 2024} & Done \\ \hline
+	\end{tabular}
+	}
+\end{table}
+
+\section{Papers}
+
+\subsection{Published}
+
+\begin{itemize}
+    \item \cite{DBLP:conf/woa/RafanelliMACO24}
+	%\\{\footnotesize\textbf{Abstract:}~\citefield{DBLP:conf/woa/RafanelliMACO24}{abstract}}
+    %
+	\item \cite{DBLP:conf/percom/MontagnaAFPKUM24}
+	%\\{\footnotesize\textbf{Abstract:}~\citefield{DBLP:conf/percom/MontagnaAFPKUM24}{abstract}}
+	%
+	\item \cite{DBLP:conf/dlog/MagniniOS24}
+	%\\{\footnotesize\textbf{Abstract:}~\citefield{DBLP:conf/dlog/MagniniOS24}{abstract}}
+	%
+	\item \cite{DBLP:journals/csur/CiattoSAMO24}
+	%\\{\footnotesize\textbf{Abstract:}~\citefield{DBLP:journals/csur/CiattoSAMO24}{abstract}}
+\end{itemize}
+
+\subsection{Accepted}
+
+\begin{itemize}
+	\item dummy
+\end{itemize}
+
+\subsection{In Peer Review}
+
+\begin{itemize}
+	\item dummy
+\end{itemize}
+
+\section{References}
+\printbibliography[heading=none]
 
 \end{document}
