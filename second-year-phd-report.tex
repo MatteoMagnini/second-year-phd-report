@@ -66,16 +66,40 @@ Prof. Giovanni Pau}
 	%\color{red}
 	#1
 	}}
-\section{Introduction}
-During the second year of my PhD, I have been working on several tasks, including research publications, teaching, visiting, participation in conferences, supervision of graduating students, and PhD courses.
+\section{Research}\label{sec:research}
 %
-In this report, I will provide a brief -- yet exhausting -- overview of the activities I have carried out during the second year.
-
-
-\section{Research}
-
+In the last decades \ac{SKE} and \ac{SKI} have been widely studied in the literature.
 %
-\subsection{Period Abroad}
+\ac{SKE} techniques aim at extracting symbolic knowledge -- e.g., logic rules -- from sub-symbolic predictors -- mostly \acp{NN} -- to improve their interpretability and trustworthiness.
+%
+Conversely, \ac{SKI} methods inject symbolic knowledge into sub-symbolic predictors in order to improve their performance or their \ac{QoS}~\cite{DBLP:journals/aamas/AgiolloRMCO23}.
+
+Recently, with the explosive success of \acp{LLM}, both \ac{SKE} and \ac{SKI} evolved to deal with these models.
+%
+In particular, when \ac{SKE} is applied to \acp{LLM}, the goal is to extract symbolic knowledge from the model concerning a specific task -- e.g., populating an ontology -- or domain -- e.g., extracting classification rules for a specific dataset.
+%
+Instead, when \ac{SKI} is applied to \acp{LLM}, the goal provides the model with prior (and possibly symbolic) knowledge to improve its performance.
+%
+In this respect, the two most common approaches are \emph{fine-tuning} and \ac{RAG}.
+
+With these premises, the research activities of my PhD were first focused on the development of new \ac{SKE}/\ac{SKI} methods~\cite{DBLP:journals/logcom/MagniniCO23,DBLP:conf/woa/MagniniCO22,DBLP:conf/cilc/MagniniCO22}, tools~\cite{DBLP:conf/atal/MagniniCO22}\footnote{\url{https://github.com/psykei/psyki-python}}\footnote{\url{https://github.com/psykei/psyke-python}} and applications~\cite{DBLP:journals/cmpb/MagniniCCAO23,DBLP:conf/extraamas/CiattoMBAO23}.
+%
+Then, the research activities moved towards \ac{LLM} applications and on the incorporation of \ac{SKE}/\ac{SKI} into \acp{LLM}.
+%
+In the context of healthcare, I have been working both on \ac{SKI}~\cite{DBLP:conf/hc/Magnini24} and on the development of a chatbot for patients with hypertension\footnote{\url{https://github.com/MatteoMagnini/hyperTensionBot}}.
+%
+This work has already led to a publication~\cite{DBLP:conf/percom/MontagnaAFPKUM24} and a submission~\cite{DBLP:conf/hc/Aguzzi24}.
+%
+Concerning the extraction of knowledge from \acp{LLM}, I have been working on the development of a tool for the learning of ontologies from \ac{LLM}~\cite{DBLP:conf/dlog/MagniniOS24}\footnote{\url{https://github.com/MatteoMagnini/ExactLearner}}.
+%
+On the same topic, I have a paper submitted~\cite{DBLP:journals/kbs/CiattoKB24}.
+
+In the rest of this report, I will provide a brief overview of the activities I have carried out during the second year of my PhD\@.
+%
+in particular, I have been working on several tasks, including research publications, teaching, visiting, participation in conferences, supervision of graduating students, and PhD courses.
+
+
+\section{Period Abroad}\label{sec:period-abroad}
 I have moved to Norway for a period of 3 months, from the 5th of March to the 8th of June 2024.
 %
 I was hosted by Prof.~Ana Ozaki at the University of Oslo, where I had the opportunity to work with her along with her research group.
@@ -85,6 +109,7 @@ During this period, I have been working on the development of a new tool for the
 In particular, the work started from the ExactLearner tool\footnote{\url{https://github.com/ExactLearner/ExactLearner}}, and it has been extended to support the learning of ontologies from text\footnote{\url{https://github.com/MatteoMagnini/ExactLearner}}.
 %
 One paper has been already published~\cite{DBLP:conf/dlog/MagniniOS24}, and a more comprehensive work is currently undergoing.
+
 
 \section{Scientific Activities}\label{sec:scientific-activities}
 %
@@ -177,10 +202,50 @@ Previous talks are the following:
 
 
 \section{Teaching}\label{sec:teaching}
+%
+During the second year of my PhD, I have been a teaching assistant for the following courses:
+%
 \begin{itemize}
-	\item Teaching assistant @ Distributed System 2023/2024, Ingegneria e Scienze Informatiche LM, 24 ore
-	\item Teaching assistant @ Distributed System 2024/2025, Ingegneria e Scienze Informatiche LM, 24 ore
+	\item \textbf{Teaching assistant for the course ``Distributed Systems'' }\hfill \textbf{Sept., 2024 $\rightarrow$ Now}
+	\\School of Engineering and Architecture (24 hours), University of Bologna, Italy
+	\\Asynchronous programming, distributed principles and architectures, consensus algorithms, ReSTfull web-services, containers, agent-based technologies and middlewares.
+	\\Course Info: \url{https://apice.unibo.it/xwiki/bin/view/Courses/Ds2425}
+	%
+	\item \textbf{ Teaching assistant for the course ``Distributed Systems'' }\hfill \textbf{Sept., 2023 $\rightarrow$ Jan., 2024}
+	\\School of Engineering and Architecture (24 hours), University of Bologna, Italy
+	\\Asynchronous programming, distributed principles and architectures, consensus algorithms, ReSTfull web-services, containers, agent-based technologies and middlewares.
+	\\Course Info: \url{https://apice.unibo.it/xwiki/bin/view/Courses/Ds2324}
 \end{itemize}
+%
+Previously, I have been a teaching assistant for the following courses:
+%
+\begin{itemize}
+	%
+	\item \textbf{ Teaching assistant for the course ``Fondamenti di Informatica'' }\hfill \textbf{Feb., 2023 $\rightarrow$ June, 2023}
+	\\School of Engineering and Architecture (35 hours), University of Bologna, Italy
+	\\Computer architecture, representation of information, algorithms and data structures, C programming language.
+	\\Course Info: \url{https://apice.unibo.it/xwiki/bin/view/Courses/Finf2223/}
+	%
+	\item \textbf{ Teaching assistant for the course ``Sistemi Distribuiti'' }\hfill \textbf{Sept., 2022 $\rightarrow$ Jan., 2023}
+	\\School of Engineering and Architecture (24 hours), University of Bologna, Italy
+	\\Asynchronous programming, distributed principles and architectures, consensus algorithms, ReSTfull web-services, containers, agent-based technologies and middlewares.
+	\\Course Info: \url{https://apice.unibo.it/xwiki/bin/view/Courses/Sd2223}
+	%
+	\item \textbf{ Teacher at professional education course }\hfill \textbf{May 5, 2023},
+	\\BPER -- Data Analytics (8 hours), \href{https://www.bbs.unibo.eu/}{BBS}
+	\\Talks topics: eXplainable Artificial Intelligence (XAI): A Gentle Introduction.
+	%
+	\item \textbf{ Teacher at professional education course }\hfill \textbf{May 17-19, 2022}
+	\\IFTS course (6 hours), \href{http://www.formart.it/home}{FORMart}
+	\\Talks topics: Business Intelligence and Big Data.
+	%
+	\item \textbf{ Teaching assistant for the course ``Fondamenti di Informatica'' }\hfill \textbf{Feb., 2022 $\rightarrow$ June, 2022}
+	\\School of Engineering and Architecture (35 hours), University of Bologna, Italy
+	\\Computer architecture, representation of information, algorithms and data structures, C programming language.
+	\\Course Info: \url{https://apice.unibo.it/xwiki/bin/view/Courses/FINF2022}
+	%
+\end{itemize}
+
 
 
 \section{Courses and School}
@@ -198,7 +263,7 @@ The total amount of proposed CFUs with exam is 20, while the total amount of pro
 	\resizebox{\textwidth}{!}{%
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
-		\textbf{Professor} & \textbf{Course} & \textbf{Kind} & \textbf{Credits & Period} & \textbf{Exam} \\ \hline
+		\textbf{Professor} & \textbf{Course} & \textbf{Kind} & \textbf{Credits} & \textbf{Period} & \textbf{Exam} \\ \hline
 		Mirko Musolesi & \makecell{Comparative Introduction to Deep Learning Frameworks:\\ TensorFlow,PyTorch and Jax} & PhD Course & \makecell{6 hours \\ 1 proposed credits} & \makecell{Nov. \\ 2022} & Done \\ \hline
 		Flavia Esposito & \makecell{Low-rank Approaches for Data Analysis:\\ Models, Numerical Methods and Applications} & PhD Course & \makecell{10 hours \\ 2 proposed credits} & \makecell{Jan. \\ 2023} & Done \\ \hline
 		Paolo Torroni & \makecell{How to Write and Publish a Research Paper\\ in Computer Science and Engineering} & PhD Course & \makecell{10 hours \\ 2 proposed credits} & \makecell{May \\ 2023} & Done \\ \hline
